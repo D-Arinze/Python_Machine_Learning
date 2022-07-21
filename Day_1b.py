@@ -6,8 +6,7 @@ import pandas as pd
 days = pd.Series(["monday","tuesday", "wednesday"])
 print(days)
 
-#days_list = np.array(["monday", "tuesday", "wednesday"])
-#print(days_list)
+
 a = [1,2,3,4,5]
 print(pd.Series(a))
 print(pd.Series([1,2,3,4,5], index=["a", "b", "c", "d", "e"]))
@@ -26,10 +25,15 @@ West_Africa = {"Countries": ["Nigeria", "Ghana", "Bene", "Ivory Coast"],
                "Age":[80, 75, 85, 69], "Population":[100000,45000,72000,36000]}
 Table1 = pd.DataFrame(West_Africa, index=[2,4,6,8])
 print(Table1)
-
 print(Table1.iloc[2])
-
 print(Table1["Countries"])
-
 print(Table1.at[2,"Capital"])
 print(Table1.iat[0,1])
+print(Table1.describe())
+
+characteristics = {"Name":["Chris","Ifeoma","Arinze","Chinaza"],
+             "Profession":["Doctor", "Lawyer", "Engineer", np.nan],
+             "Birth_year": [1980, np.nan, 1992, 1994], "Height":[180, 174, 177, np.nan] }
+candidate = pd.DataFrame(characteristics)
+print(candidate)
+print(candidate.dropna())
