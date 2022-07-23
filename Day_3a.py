@@ -32,5 +32,5 @@ c = csv_empty["Calories"].mean()
  #   if csv_empty.loc[x,"Duration"] > 120:
   #      csv_empty.drop(x, inplace=True)
 
-
+#csv_empty.drop_duplicates(inplace=True) - Deleting the duplicated row.
 print(csv_empty)
